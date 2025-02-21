@@ -15,27 +15,27 @@
                 @csrf
                 <div class="mb-3">
                     <label class="form-label">Name</label>
-                    <input type="text" class="form-control" name="name" placeholder="Enter name" required>
+                    <input type="text" class="form-control" name="name" placeholder="Enter name" >
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Age</label>
-                    <input type="number" class="form-control" name="age" placeholder="Enter age" required>
+                    <input type="number" class="form-control" name="age" placeholder="Enter age" >
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Date</label>
-                    <input type="date" class="form-control" name="date" required>
+                    <input type="date" class="form-control" name="date" >
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Phone</label>
-                    <input type="tel" class="form-control" name="phone" placeholder="Enter phone number" required>
+                    <input type="tel" class="form-control" name="phone" placeholder="Enter phone number" >
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Website</label>
-                    <input type="url" class="form-control" name="web" placeholder="Enter website URL" required>
+                    <input type="url" class="form-control" name="web" placeholder="Enter website URL" >
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Address</label>
-                    <input type="text" class="form-control" name="address" placeholder="Enter address" required>
+                    <input type="text" class="form-control" name="address" placeholder="Enter address" >
                 </div>
                 <div>
                     @include ('block.error') {{-- đây là cách gọi file error.blade.php --}}
