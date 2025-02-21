@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\sumController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\signupController;
+use App\Http\Controllers\CovidController;
 
 // Route::get('/', function () {
 //     return view('home');
@@ -51,8 +52,11 @@ use App\Http\Controllers\signupController;
 // Route::get('/create', [PostController::class, 'create']);
 
 // bai7 form request
-Route::get('/signup', [signupController::class, 'index']);
-Route::post('/signup', [signupController::class, 'displayInfor']);
+// Route::get('/signup', [signupController::class, 'index']);
+// Route::post('/signup', [signupController::class, 'displayInfor']);
 
+// Route::get('/signup', [signupController::class, 'index'])->name('signup.form');
+// Route::post('/signup', [signupController::class, 'displayInfor'])->name('signup.submit');
 
-
+// Bai 8
+Route::get('/covid', [CovidController::class, 'getData']);

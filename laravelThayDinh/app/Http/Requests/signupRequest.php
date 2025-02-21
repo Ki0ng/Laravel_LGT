@@ -23,7 +23,7 @@ class signupRequest extends FormRequest
     {
         return [
             // xet cac rang buoc
-            'name' => 'required|max:255|string',
+            'name' => 'string',
             'age' => 'numeric',
             'date' => 'string',
             'phone' => 'numeric',
@@ -37,9 +37,9 @@ class signupRequest extends FormRequest
         return [
             // xet cac loi
             'name.string' => 'Vui long dien ten cho noi dung',
-            'age.numberic' => 'Vui long nhap tuoi cho noi dung',
+            'age.numeric' => 'Vui long nhap tuoi cho noi dung',
             'date.string' => 'Vui long nhap ngay thang cho noi dung',
-            'phone.numberic' => 'Vui long nhap so dien thoai cho noi dung',
+            'phone.numeric' => 'Vui long nhap so dien thoai cho noi dung',
             'web.string' => 'Vui long nhap kiem tra lai ky tu cho noi dung',
             'address.string' => 'Vui long nhap lai dia chi'
         ];       
