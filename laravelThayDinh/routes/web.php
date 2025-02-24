@@ -6,7 +6,6 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\sumController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\signupController;
-use App\Http\Controllers\CovidController;
 
 // Route::get('/', function () {
 //     return view('home');
@@ -59,4 +58,9 @@ use App\Http\Controllers\CovidController;
 // Route::post('/signup', [signupController::class, 'displayInfor'])->name('signup.submit');
 
 // Bai 8
-Route::get('/covid', [CovidController::class, 'getData']);
+use App\Http\Controllers\CovidController;
+// Route::get('/covid', [CovidController::class, 'getData']);
+
+// Get API bai 9 
+use App\Http\Controllers\ProductController;
+Route::resource('products', ProductController::class);
