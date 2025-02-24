@@ -62,5 +62,5 @@ use App\Http\Controllers\CovidController;
 // Route::get('/covid', [CovidController::class, 'getData']);
 
 // Get API bai 9 
-use App\Http\Controllers\ProductController;
-Route::resource('products', ProductController::class);
+use App\Http\Controllers\ProductController;						
+Route::get('/products', [ProductController::class, 'index'])->name('products.index');						
