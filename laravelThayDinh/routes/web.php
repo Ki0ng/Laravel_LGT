@@ -63,4 +63,42 @@ use App\Http\Controllers\CovidController;
 
 // Get API bai 9 
 use App\Http\Controllers\ProductController;
-Route::resource('products', ProductController::class);
+// Route::resource('products', ProductController::class);
+
+// bai10
+use App\Http\Controllers\pageController;
+
+// Route::get('/teo', [pageController::class, 'getIndex']);
+// Route::get('/', function () {
+//     return view('wellcome');
+// });
+// Route::get('index', [
+//     'as' => 'trang-chu',
+//     'uses' => 'pageController@getIndex'
+// ]);
+
+// thuc hien tao table trong database
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+
+Route::get('/create-products-table', function () {
+        Schema::create('products', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->decimal('price', 15, 2);
+            $table->integer('stock')->default(0);
+            $table->timestamps();
+        });
+
+    echo 'Tạo bảng products thành công!';
+});
+
+
+// 
+use App\Http\Controllers\DatabaseController;
+
+// Route::get('/create-productss', [DatabaseController::class, 'taoDatabseController']);
+
+use App\Http\Controllers\CreateTableController;
+
+Route::get('/create-tables', [CreateTableController::class, 'createTables']);
